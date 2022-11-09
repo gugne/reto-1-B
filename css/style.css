@@ -1,0 +1,295 @@
+html{
+    box-sizing: border-box;/*Evita que el with o padding no modifique el tamaño de los elementos*/
+    font-size: 62.5%; /*hack para rems 1rem=10px*/
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    color: rgba(21, 20, 57, 0.4);
+}
+
+
+/*Globales*/
+
+.container{
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (min-width: 1420px) {
+    .container{
+        padding: 0 0rem;
+    }
+    
+}
+
+h2{
+    font-size: 3.7rem;
+    color: #1E0E62;
+    line-height: 5rem;
+    margin: 0 0;
+}
+
+@media (min-width: 400px) {
+    h2{
+        font-size: 4.3rem;
+    }
+    
+}
+
+h3{
+    font-size: 1.8rem;
+    color: #1E0E62;
+}
+/*Header*/
+.header{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    color: #1E0E62;
+}
+
+.header a{
+    text-decoration: none;
+    border: 2px solid #EBEAED;
+    border-radius: 100px;
+    padding: 0.3rem 2rem;
+    font-size: 1.6rem;
+    
+}
+
+@media (min-width: 1420px) {
+    .header{
+        padding: 0 0;
+        
+    }
+    
+}
+
+.header h1{
+    font-size: 2.4rem;
+    color: #1E0E62;
+}
+
+/*Cover Letter*/
+.cover-letter{
+    background-color: #F1F1F1;
+}
+
+
+.cover-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 2rem;
+
+}
+
+.cover-grid img{
+    width: 100%;
+    max-width: 35rem;
+    border-radius: 8rem;
+    display: block;
+    margin: auto;
+}
+
+.cover-text div{
+    padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+
+    .cover-text{
+        gap: 4rem;
+    }
+
+    .cover-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+    .cover-grid img{
+        width: 100%;
+        max-width: 57rem;
+        border-radius: 8rem;
+        margin: auto auto;
+    }
+
+    .cover-text div{
+        padding: 0 0rem;
+    }   
+}
+
+/*Skills*/
+
+.skills-grid h2{
+    text-align: left;
+    padding-bottom: 4rem;
+}
+
+.skill h3{
+    text-align: left;
+}
+
+.skill p{
+    text-align: left;
+}
+
+.skills-grid{
+    padding-top: 10rem;
+}
+
+.skill:first-child{
+    padding-top: 8rem;
+    border-top: 1px solid #9999A7;
+}
+
+
+.skill:nth-child(n+3){
+    padding-left: 2rem;
+}
+
+@media (min-width: 768px) {
+    .skills-grid h2{
+        text-align: center;
+    }
+    .skill p{
+        text-align: center;
+    }
+    .skill h3{
+        text-align: center;
+    }
+    .skills-grid{
+        padding-top: 10rem;
+        padding-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 2rem;
+    }
+    
+    .skill:nth-child(1){
+        grid-column: 1/9;
+        border-top: none;
+    }
+    .skill:nth-child(2){
+        grid-column: 2/8;
+    }
+    .skill:nth-child(3){
+        grid-column: 2/4;
+    }
+    .skill:nth-child(4){
+        grid-column: 4/6;
+    }
+    .skill:nth-child(5){
+        grid-column: 6/8;
+    }
+    
+    .skill:last-child{
+        padding-bottom: 10rem;
+    }
+    
+}
+
+
+/*Principal*/
+
+.works-grid{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    column-gap: 3rem;
+    row-gap: 8rem;
+    padding-bottom: 15rem;
+
+}
+
+
+.works-grid img{
+    width: 100%;
+}
+
+.works-grid h2{
+    padding-top: 10rem;
+    text-align: center;
+
+}
+.works-grid p{
+    padding-top: 2rem;
+    text-align: center;
+    margin: 0 0;
+}
+
+.works-grid h3{
+    margin: 0 0;
+}
+
+
+.works-grid a{
+    text-align: center;
+}
+
+.work:nth-child(1){
+    grid-column: 1/7;
+}
+.work:nth-child(2){
+    grid-column: 2/6;
+}
+.work:nth-child(3){
+    grid-column: 1/7;
+}
+.work:nth-child(4){
+    grid-column: 1/3;
+}
+.work:nth-child(5){
+    grid-column: 3/5;
+}
+.work:nth-child(6){
+    grid-column: 5/7;
+}
+.work:nth-child(7){
+    grid-column: 1/3;
+}
+.work:nth-child(8){
+    grid-column: 3/5;
+}
+.work:nth-child(9){
+    grid-column: 5/7;
+}
+
+/*Header*/
+
+.footer{
+    background-color: #F1F1F1;
+}
+
+.footer div{
+    padding: 20rem 0;
+    text-align: center;
+}
+
+#mail{
+    color: #482BE7;
+}
+
+.links{
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    gap: 7.2rem;
+}
+
+.links li{
+    list-style: none;
+}
+.links a{
+    text-decoration: none;
+    color: #9999A7;
+}
